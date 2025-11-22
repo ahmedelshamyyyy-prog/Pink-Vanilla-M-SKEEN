@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>MÜSKEEN | Pink Vanilla</title>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+	<link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Droid+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="antialiased">
+
+	<div id="splash-entry" class="h-screen w-full flex items-center justify-center">
+		<div class="flex flex-col w-fit text-center">
+			<h1 id="splash-title" class="font-droid-serif text-7xl md:text-8xl font-bold text-black tracking-widest leading-none">MÜSKEEN</h1>
+			<div class="w-full text-right">
+				<p class="font-droid-sans text-sm text-black -mt-2">est. 2025</p>
+			</div>
+		</div>
+	</div>
+
+	<main id="main-content" class="main-hidden">
+		<section class="relative h-screen flex items-center justify-center overflow-hidden">
+			<div id="hero-background-container" class="z-0">
+				<div class="absolute inset-0 bg-gradient-to-t from-[#e3dac9] via-transparent to-[#e3dac9]/50"></div>
+			</div>
+
+			<div class="relative z-10 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full pt-20">
+				<div class="order-2 lg:order-1 text-center lg:text-left space-y-6">
+					<h2 class="font-droid-sans text-sm md:text-base uppercase tracking-[0.3em] text-black initial-fade-in-up">
+						THE NEW FRAGRANCE
+					</h2>
+
+					<h1 class="font-droid-serif text-4xl md:text-6xl lg:text-8xl font-bold leading-tight initial-fade-in-up delay-100 text-red-highlight">
+						PINK <br> VANILLA
+					</h1>
+
+					<p class="font-droid-sans text-lg text-gray-700 max-w-md mx-auto lg:mx-0 leading-relaxed initial-fade-in-up delay-200">
+						STRONGER. SWEETER. LASTING. <br />
+						A deep gourmand fusion anchored by our signature White Musk.
+					</p>
+
+					<div class="pt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start initial-fade-in-up delay-300">
+						<button onclick="generateTts()" id="ttsButton" class="group flex items-center justify-center lg:justify-start gap-2 text-sm uppercase tracking-widest text-gray-600 hover:text-black transition focus:outline-none focus-ring">
+							<span class="w-8 h-[1px] bg-accent group-hover:bg-black transition"></span>
+							<span id="ttsText">Hear the Essence</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="order-1 lg:order-2 flex justify-center">
+					<img id="pink-vanilla-flower" src="https://www.gardenia.net/wp-content/uploads/2023/04/OlLcTpqWxPNhDMFKwlrruN07YlZfK9t613TeS7aW-747x533.webp"
+						onerror="this.onerror=null; this.src='https://placehold.co/747x533/e3dac9/C68E57?text=PINK+VANILLA+FLOWERS';"
+						alt="Pink Vanilla Flowers"
+						class="js-scroll-hidden" />
+				</div>
+			</div>
+		</section>
+
+		<section class="py-24 px-6 bg-transparent">
+			<div class="container mx-auto max-w-5xl">
+				<div class="text-center mb-16 js-scroll-hidden">
+					<h2 class="font-droid-serif text-3xl md:text-4xl italic mb-4 text-black">Notes</h2>
+					<div class="h-[2px] w-12 bg-accent mx-auto"></div>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+					<div class="space-y-4 group js-scroll-hidden">
+						<h3 class="font-droid-sans text-xs uppercase tracking-[0.2em] text-accent">Top Notes</h3>
+						<p class="font-droid-serif text-2xl text-gray-800">Pink Sugar <br/> & Litchi</p>
+					</div>
+
+					<div class="space-y-4 group js-scroll-hidden" style="transition-delay: 0.12s;">
+						<h3 class="font-droid-sans text-xs uppercase tracking-[0.2em] text-accent">Heart Notes</h3>
+						<p class="font-droid-serif text-2xl text-gray-800">Whipped Cream <br/> & Bourbon Vanilla</p>
+					</div>
+
+					<div class="space-y-4 group js-scroll-hidden" style="transition-delay: 0.24s;">
+						<h3 class="font-droid-sans text-xs uppercase tracking-[0.2em] text-accent">Base Notes</h3>
+						<p class="font-droid-serif text-2xl text-gray-800">White Musk <br/> & Sandalwood</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 px-6 border-t border-black/10">
+			<div class="container mx-auto max-w-4xl text-center space-y-8 js-scroll-hidden">
+				<p class="font-droid-serif text-xl md:text-3xl leading-relaxed text-gray-800">
+					"Pink Vanilla is an invitation to indulgence. We have captured the warmth of <span class="text-accent italic">Bourbon Vanilla</span> and electrified it with the brightness of Litchi. Anchored by MÜSKEEN's proprietary musk fixative, it is designed to be stronger, with you, all day."
+				</p>
+
+				<div class="pt-10">
+					<button onclick="showPairingModal()" class="text-xs font-droid-sans uppercase tracking-[0.2em] border-b border-transparent hover:border-accent hover:text-accent transition pb-1 text-black focus:outline-none focus-ring">
+						View Styling Suggestions
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="w-full h-[60vh] relative overflow-hidden bg-transparent">
+			<div class="absolute inset-0 flex items-center justify-center">
+				<h2 class="font-droid-serif text-4xl md:text-6xl text-black">UNFORGETTABLE.</h2>
+			</div>
+		</section>
+	</main>
+
+	<footer class="py-16 px-6 bg-transparent text-center border-t border-black/10">
+		<h3 class="font-droid-serif text-2xl text-black mb-6">MÜSKEEN.</h3>
+		<button class="bg-black text-white font-droid-sans font-bold uppercase tracking-widest px-16 py-4 rounded-lg shadow-lg hover:bg-accent hover:text-white transition duration-300 focus:outline-none focus-ring">
+			Add to Bag - 950 EGP
+		</button>
+		<p class="mt-8 text-xs text-gray-600 font-droid-sans">© 2025 MÜSKEEN PERFUMES. ALL RIGHTS RESERVED.</p>
+	</footer>
+
+	<div id="pairingModal" class="fixed inset-0 z-[100] flex items-center justify-center modal-backdrop modal-hidden" role="dialog" aria-modal="true" aria-hidden="true">
+		<div id="modalPanel" class="bg-[#f4f1ea] border border-black/20 p-8 max-w-lg w-full relative rounded-lg shadow-2xl">
+			<button onclick="closePairingModal()" aria-label="Close" class="absolute top-4 right-4 text-gray-500 hover:text-black transition focus:outline-none focus-ring">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+
+			<h4 class="font-droid-serif text-2xl text-accent mb-6 italic">Luxury Pairing Concierge</h4>
+
+			<div id="pairingContent" class="font-droid-sans text-sm text-gray-800 leading-relaxed min-h-[150px] flex items-center justify-center text-center">
+				<div class="animate-pulse text-accent uppercase tracking-widest text-xs">Curating suggestions...</div>
+			</div>
+		</div>
+	</div>
+
+	<audio id="audioPlayer" hidden></audio>
+
+	<script src="script.js"></script>
+</body>
+</html>
